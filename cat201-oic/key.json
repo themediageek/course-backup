@@ -1,0 +1,13 @@
+{
+  "format": 1,
+  "title": "CAT201: Online Instruction Certification",
+  "packId": "c54e109a",
+  "course": "course-c54e109a.bin",
+  "kdf": {
+    "name": "PBKDF2",
+    "hash": "SHA-256",
+    "iterations": 600000,
+    "salt": "E13bWQUWo0DAXZFo5c1CTQ=="
+  },
+  "wrappedKey": "QSZgcRXSimKUtebisc+43PrlhOKrJP8NPLHXgyjFWITzvYaskPx3StXclXLeGBmmeF+bBC6a5tRij0+4"
+}
