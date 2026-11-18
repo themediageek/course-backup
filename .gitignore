@@ -1,0 +1,4 @@
+node_modules/
+tests/fixtures.local.json
+test-courses/
+/test-*/

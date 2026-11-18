@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data: blob:; media-src 'self' https: blob:; frame-src https:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Help for faculty | Course backup</title>
+<link rel="stylesheet" href="../app/styles.css">
+<script type="module" src="../app/site.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="../">Course backup</a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="../publish/">Publish a course</a>
+      <span id="theme-slot"></span>
+    </nav>
+  </div>
+</header>
+<main id="main" class="page-shell help" tabindex="-1">
+  <h1>Help for faculty</h1>
+  <p class="lead">This site puts a password-protected, read-only copy of your Canvas course online, so your students can keep reading it while Canvas is down. You load your course export, preview it, and make it live, all in a web browser.</p>
+
+  <nav class="card toc" aria-labelledby="toc-title">
+    <h2 id="toc-title">On this page</h2>
+    <ol>
+      <li><a href="#before">Before an outage</a></li>
+      <li><a href="#setup">Set up your site (first time only)</a></li>
+      <li><a href="#publish">Publish a course</a></li>
+      <li><a href="#connect">Connect on another computer</a></li>
+      <li><a href="#students">Send the link to your students</a></li>
+      <li><a href="#replace">Replace a course or change its password</a></li>
+      <li><a href="#remove">Take a course down</a></li>
+      <li><a href="#tracker">Keep track of submissions</a></li>
+      <li><a href="#leak">If a password gets out</a></li>
+      <li><a href="#size">Size limits</a></li>
+      <li><a href="#what">What students see</a></li>
+      <li><a href="#nokey">If you cannot use a GitHub key</a></li>
+      <li><a href="#updates">Get updates to the site</a></li>
+    </ol>
+  </nav>
+
+  <section class="card" id="before" aria-labelledby="before-title">
+    <h2 id="before-title">Before an outage</h2>
+    <p>Download two things at the start of each term and keep them on your computer.</p>
+    <ol class="steps">
+      <li>Your course export. In Canvas, open the course, go to "Settings", choose "Export Course Content", select "Course", and click "Create Export". When the export is ready, download the .imscc file.</li>
+      <li>Your class roster, from the campus student system. You cannot get it from Canvas while Canvas is down, and you will need it for the submission tracker.</li>
+    </ol>
+    <p>Export the course again after you make large changes, so your copy stays current.</p>
+  </section>
+
+  <section class="card" id="setup" aria-labelledby="setup-title">
+    <h2 id="setup-title">Set up your site (first time only)</h2>
+    <p>Your courses go on a site in your own GitHub account. The "Publish a course" page walks you through the setup, which takes about ten minutes.</p>
+    <ol class="steps">
+      <li>Make a free account at <a href="https://github.com/signup">github.com</a> if you do not have one. Use an account that you use for nothing else. Sites on one account share a web address, so another site on that address could reach the passwords students save on their devices.</li>
+      <li>Open the <a href="../publish/">"Publish a course" page</a> and click "Connect to GitHub". Then click "Make your course site". GitHub opens a form that copies this site into your account under the name course-backup, as a public repository. Click "Create repository". Every course you publish is locked with its password, so a public repository is safe.</li>
+      <li>Back on the publish page, click "Open GitHub's key form". GitHub opens the form with the name, a one-year expiry, and the two permissions the page needs already filled in. Under "Repository access", choose "Only select repositories" and pick course-backup.</li>
+      <li>Click "Generate token" at the bottom of the form, then copy the key GitHub shows. It starts with github_pat_. Paste it into the publish page and click "Connect". Tick "Remember on this computer" only on your own computer.</li>
+      <li>The page then asks you to turn on GitHub Pages, which puts your site on the web. Click "Open the Pages settings". Under "Build and deployment", set "Source" to "Deploy from a branch", choose the "main" branch and the "/ (root)" folder, and click "Save". Then click "Check again" on the publish page.</li>
+    </ol>
+    <p>Your site's address looks like https://your-name.github.io/course-backup/, and each course gets its own folder under it.</p>
+  </section>
+
+  <section class="card" id="publish" aria-labelledby="publish-title">
+    <h2 id="publish-title">Publish a course</h2>
+    <ol class="steps">
+      <li>Open your site's "Publish a course" page and drop your .imscc file onto it.</li>
+      <li>Click "Preview as a student" and look through the course. Then check the link name, the password, and your name and email.</li>
+      <li>If the page lists content that opens later, untick anything that holds answers. The site shows that content on its date, but a student who has the password could read it early with browser tools.</li>
+      <li>Click "Continue", then "Make it live". The first time, the page asks you to set up your site (see the section above).</li>
+      <li>Wait while the page sends the locked course to GitHub. When the course is online, usually after about a minute, the page shows the student link and a message you can send.</li>
+    </ol>
+    <p>The page also saves the submission tracker to your Downloads folder. The tracker never goes to GitHub.</p>
+  </section>
+
+  <section class="card" id="connect" aria-labelledby="connect-title">
+    <h2 id="connect-title">Connect on another computer</h2>
+    <p>GitHub shows a key only once, so on a new computer you make a new key. On the publish page, click "Connect to GitHub", skip "Make your course site", and follow the key steps. Your site and your courses stay as they are.</p>
+    <p>If your site's repository is not named course-backup, open "My site has a different name" under the key and type the name. The key lasts one year. When it expires, the page asks you to connect again with a new key. On a shared computer, click "Disconnect" when you finish.</p>
+  </section>
+
+  <section class="card" id="students" aria-labelledby="students-title">
+    <h2 id="students-title">Send the link to your students</h2>
+    <p>When a course goes live, the page writes a message you can copy into an email. It holds the course link and the password. Send it from your campus email, so students know it comes from you.</p>
+    <p>On their own computers and phones, students can tick "Remember on this device" so they do not type the password on every visit. On a shared or library computer they should leave it unticked.</p>
+  </section>
+
+  <section class="card" id="replace" aria-labelledby="replace-title">
+    <h2 id="replace-title">Replace a course or change its password</h2>
+    <p>On the publish page, under "Your live courses", click "Replace" next to the course and load the new export. Then preview it and click "Make it live" as before. The new version replaces the old one at the same link in one step.</p>
+    <p>To change only the password, replace the course with the same export and choose a new password. Students who saved the old password on a device will be asked for the new one.</p>
+  </section>
+
+  <section class="card" id="remove" aria-labelledby="remove-title">
+    <h2 id="remove-title">Take a course down</h2>
+    <p>When Canvas is back, open the publish page. Under "Your live courses", click "Take down" next to the course and confirm. The course stops opening about a minute later.</p>
+    <p>To remove the whole site, open the repository on GitHub, click "Settings", go to the bottom of the page, and choose "Delete this repository".</p>
+  </section>
+
+  <section class="card" id="tracker" aria-labelledby="tracker-title">
+    <h2 id="tracker-title">Keep track of submissions</h2>
+    <p>The submission tracker is an Excel file named after your course, such as "LAS 291-292 submission tracker.xlsx". It lists every graded assignment, discussion, and quiz in the order of your modules.</p>
+    <ol class="steps">
+      <li>Paste your roster into the Submissions sheet: names in column A and email addresses in column B, starting in row 4.</li>
+      <li>For each student and assignment, choose Received, Late, Missing, or Excused. The last column counts each student's missing work.</li>
+      <li>Type the points each student earned on the Scores sheet. Total and Percent fill in as you type.</li>
+    </ol>
+    <div class="notice notice-warn"><p>Keep the tracker on your own computer. Do not upload it to GitHub, Google Drive, or any shared folder, because it holds student records that FERPA protects.</p></div>
+    <p>The site does not collect work. Tell students how to turn in work during the outage, for example by email or through a Google Form.</p>
+  </section>
+
+  <section class="card" id="leak" aria-labelledby="leak-title">
+    <h2 id="leak-title">If a password gets out</h2>
+    <p>Replace the course with a new password. GitHub keeps every earlier version of a repository, though, and the old password still opens the old version. To remove it completely, delete the repository, set up the site again, and publish the course with the new password.</p>
+  </section>
+
+  <section class="card" id="size" aria-labelledby="size-title">
+    <h2 id="size-title">Size limits</h2>
+    <ul>
+      <li>GitHub publishes a site of up to 1 GB, and that limit covers all the courses in one repository together. The publish page shows each course's size and warns you above 500 MB.</li>
+      <li>If your courses do not fit, make a second site with "Make your course site" and give it another name, such as course-backup-2. Connect to it by typing that name under "My site has a different name".</li>
+      <li>Videos take the most space. If a video is already on YouTube or Panopto, untick it on the publish page and give students that link instead.</li>
+      <li>GitHub also limits each site to about 100 GB of downloads a month, and a class that watches long videos on the site can use a large share of that.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="what" aria-labelledby="what-title">
+    <h2 id="what-title">What students see</h2>
+    <p>Students see the course home page, the modules in your order, pages, files, links to outside websites, and the instructions for assignments and discussions, with due dates, points, and rubrics. For quizzes they see the title and instructions only.</p>
+    <p>The site leaves out quiz questions and answers, anything unpublished, locked files, and hidden files that no page links to. It has no submissions, grades, or discussion replies. Tools that opened through Canvas, and videos stored in Canvas Studio, will not work.</p>
+    <p>Dates come from the Canvas course. If due dates change during the outage, tell students in your email.</p>
+  </section>
+
+  <section class="card" id="nokey" aria-labelledby="nokey-title">
+    <h2 id="nokey-title">If you cannot use a GitHub key</h2>
+    <p>On the "Make it live" step, open "Save the folder instead" and save the locked course folder. Then open your repository on GitHub, choose "Add file" and then "Upload files", drag the folder onto the page, and click "Commit changes". The course goes online about a minute later.</p>
+  </section>
+
+  <section class="card" id="updates" aria-labelledby="updates-title">
+    <h2 id="updates-title">Get updates to the site</h2>
+    <p>Each time you make a course live, the publish page copies its own version of the site's code into your repository, in the same step as the course. So if you publish from the <a href="https://romanf88-arch.github.io/course-backup-site/publish/">main publish page</a>, your site gets every fix to that page. Your courses and any files you added yourself stay as they are.</p>
+  </section>
+</main>
+</body>
+</html>

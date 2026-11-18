@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data: blob:; media-src 'self' https: blob:; frame-src https:; connect-src 'self' https://api.github.com; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Publish a course | Course backup</title>
+<link rel="stylesheet" href="../app/styles.css">
+<script src="../vendor/zip.min.js"></script>
+<script src="../vendor/exceljs.min.js" defer></script>
+<script type="module" src="publish.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="../">Course backup</a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="../help/">Help</a>
+      <span id="theme-slot"></span>
+    </nav>
+  </div>
+</header>
+<main id="main" class="page-shell" tabindex="-1">
+  <h1>Publish a course</h1>
+  <p class="lead">Load your Canvas course export, preview it, and make it live for your students. The export stays on this computer. GitHub receives only the locked copy of the course.</p>
+  <section id="github-panel" aria-live="polite"></section>
+  <ol class="stepper" id="stepper" aria-label="Steps"></ol>
+  <section id="step" aria-live="off">
+    <noscript><p class="notice notice-warn">This page needs JavaScript. Turn it on in your browser settings, then reload the page.</p></noscript>
+  </section>
+</main>
+<dialog class="preview-dialog" id="preview" aria-labelledby="preview-title"></dialog>
+<dialog class="confirm-dialog" id="confirm" aria-labelledby="confirm-text"></dialog>
+</body>
+</html>

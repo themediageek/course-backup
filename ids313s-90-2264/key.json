@@ -1,0 +1,13 @@
+{
+  "format": 1,
+  "title": "IDS313S-90_2264: IDS Serv Learn",
+  "packId": "d813b081",
+  "course": "course-d813b081.bin",
+  "kdf": {
+    "name": "PBKDF2",
+    "hash": "SHA-256",
+    "iterations": 600000,
+    "salt": "Diib5HMjf+WSPkteZi1QUQ=="
+  },
+  "wrappedKey": "5WgIIClxGrvPNu3N6+WABXFtd3xgWYnKLP2fCPExV3ZX4yImLksQxgHnsSA88mF8u4fM8udl+QmXydrv"
+}
